@@ -1,10 +1,11 @@
-#Sign in functionality
+#Notejam UI testing
 
 
 
 
 ##Sign in and creation of note
 
+This scenario is used to sign up to notejam and create a new pad and write a note inside it
 
 * Signup to notejam with "mahajananky@gmail.com"
 * Use the password "123456789"
