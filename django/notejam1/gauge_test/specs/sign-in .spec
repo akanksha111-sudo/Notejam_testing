@@ -7,7 +7,7 @@
 
 This scenario is used to sign up to notejam and create a new pad and write a note inside it
 
-* Signup to notejam with "mahajananky@gmail.com"
+* Signup to notejam with "mahajan@gmail.com"
 * Use the password "123456789"
 * Create a new pad with name "My Daily Routine" and save
 * write a note with name "Monday routine"

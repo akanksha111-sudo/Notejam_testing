@@ -1,6 +1,6 @@
 /* globals gauge*/
 "use strict";
-const { openBrowser,write,button, closeBrowser, $ , click , goto,label, link,into , press, screenshot, text, focus, textBox, toRightOf } = require('taiko');
+const { openBrowser,write,button, closeBrowser, $ , click , goto,label, link,into , press, screenshot, text, focus, textBox, toRightOf,evaluate } = require('taiko');
 const assert = require("assert");
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 const BASE_URL = "http://127.0.0.1:8000/ ";
@@ -41,11 +41,11 @@ step("write a note with name <Name>", async function(name) {
 	await write(name,into(textBox({name:"name"})));
 });
 
-
-
 step("write inside the note <text> and save", async function(text) {
     await write(text,into(textBox({name:"text"})));
     await click(button("Save"));
+    await evaluate(link("Sign out"),(elem) => elem.click());
+    
 });
 
 step("Click the button Forgot password", async function() {
