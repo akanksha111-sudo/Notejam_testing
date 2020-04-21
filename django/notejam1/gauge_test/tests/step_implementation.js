@@ -35,6 +35,8 @@ step("Create a new pad with name <Name> and save", async function(name) {
     await write(name, into (textBox({ name:"name"})));
     await click(button('Save'));
     await click(link('New note'));
+    assert.ok(await text(name).exists());
+	
 });
 
 step("write a note with name <Name>", async function(name) {
@@ -56,9 +58,6 @@ step("Write <email> in email box and it will generate a new password", async fun
     await write(email,into(textBox({name:"email"})));
     await click(button("Generate password"));
 });
-
-
-
 
 
 step("Click on sign up to create a new account", async function() {
